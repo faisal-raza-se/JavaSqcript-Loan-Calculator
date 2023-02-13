@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loan Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <style>
+    #loading, #results{
+      display: none;
+    }
+  </style>
+  </head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+          <form id="loan-form">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="number" class="form-control" id="amount" placeholder="Loan Amount" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">%</span>
+                <input type="number" class="form-control" id="interest" placeholder="Interest" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <input type="number" class="form-control" id="years" placeholder="Years To Repay" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <input type="submit" value="Calculate" class="btn btn-dark btn-block" />
+              </div>
+            </div>
+          </form>
+          <!--LOADER HERE-->
+          <div id="loading">
+            <img src="img/loading.gif" alt="">
+          </div>
+          <!--RESULTS-->
+          <div id="results" class="pt-4">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Monthly Payments</span>
+                <input type="number" class="form-control" id="monthly-payment" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Total Payment</span>
+                <input type="number" class="form-control" id="total-payment" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Total Interest</span>
+                <input type="number" class="form-control" id="total-interest" disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
